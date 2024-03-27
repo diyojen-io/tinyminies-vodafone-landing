@@ -16,7 +16,7 @@
   --text: #7830d3;
   --border: #6400d8;
   --border-bg: #fffca8;
-  --black: #6808d9;
+  --black: #000;
   --title-font-size: 32px;
   --subtitle-font-size: 18px;
 }
@@ -42,8 +42,7 @@ body {
 
 .title h1,
 .title p,
-.content p,
-.content h1 {
+.qr-code-text {
   font-family: "Bjola", sans-serif;
 }
 
@@ -100,29 +99,37 @@ body {
   font-size: 14px;
 }
 
-.qr-code-box {
+.qr-code {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 360px;
+  margin: 0 auto;
 }
 
-.qr-code {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.qr-code h5 {
+.qr-code-title {
   font-size: 14px;
+  font-weight: 400;
   color: var(--text);
-  margin-bottom: 0;
+  margin: 10px auto;
 }
 
 .qr-code-text {
   position: relative;
   max-width: 100px;
+  margin-right: 10px;
+}
+
+.qr-code-text p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+
+.qr-code-text span {
+  text-transform: uppercase;
+  line-height: 32px;
 }
 
 .qr-code-text::after {
@@ -130,64 +137,51 @@ body {
   content: "";
   width: 24px;
   height: 24px;
-  right: 0;
-  bottom: 0px;
+  right: 0px;
+  bottom: 5px;
   background-image: url("static/images/phone.png");
   background-repeat: no-repeat;
 }
 
 .qr-code-area {
-  width: calc(100% - 130px);
+  position: relative;
+  width: calc(100% - 100px);
   height: 125px;
   background-image: url("static/images/qr_code.png");
   background-repeat: no-repeat;
 }
 
 .qr-code-area::after {
-  /* arrow */
-  /* position: absolute;
-  top: 0;
-  bottom: 0;
+  position: absolute;
   content: "";
-  width: 125px;
-  height: 125px; */
-}
-
-.qr-code {
-  display: flex;
-  position: relative;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-}
-
-.content p,
-.content h1 {
-  color: #000;
-  line-height: 28px;
-  margin: 0 auto;
-}
-
-.content h1 {
-  text-transform: uppercase;
-}
-
-.content p {
-  font-size: 14px;
-  line-height: 16px;
-  margin-bottom: 5px;
-}
-
-.qr-code-img {
-  width: 130px;
+  top: -10px;
+  right: 25px;
+  width: 80px;
   height: 125px;
+  background-image: url("static/images/yesil_ok.png");
+  background-repeat: no-repeat;
 }
 
-.green-arrow {
-  /* position: absolute; */
+.bottom-icons {
+  margin-top: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 450px;
+  margin-left: 50px;
+}
+
+.footer a {
+  font-size: 14px;
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.footer a:hover {
+  color: var(--text);
 }
