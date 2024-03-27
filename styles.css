@@ -1,0 +1,193 @@
+@font-face {
+  font-family: "Bjola";
+  src: url("static/fonts/bjola-webfont.eot");
+  src: url("static/fonts/bjola-webfont.eot?#iefix") format("embedded-opentype"),
+    url("static/fonts/bjola-webfont.woff2") format("woff2"),
+    url("static/fonts/bjola-webfont.woff") format("woff"),
+    url("static/fonts/bjola-webfont.ttf") format("truetype"),
+    url("static/fonts/bjola-webfont.svg#Bjola") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --title: #0044c1;
+  --subtitle: #ed3382;
+  --text: #7830d3;
+  --border: #6400d8;
+  --border-bg: #fffca8;
+  --black: #6808d9;
+  --title-font-size: 32px;
+  --subtitle-font-size: 18px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+.logo img {
+  width: 128px;
+}
+
+.title h1,
+.title p,
+.content p,
+.content h1 {
+  font-family: "Bjola", sans-serif;
+}
+
+.title h1 {
+  font-size: var(--title-font-size);
+  font-weight: 700;
+  color: var(--title);
+  margin: 0;
+}
+
+.title p {
+  font-size: var(--subtitle-font-size);
+  font-weight: 400;
+  color: #ed3382;
+  margin: 0;
+}
+
+.mom-and-kids {
+  background-image: url("static/images/anne_cocuk_gorsel.png");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  width: 100%;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.top-icons {
+  width: 390px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.activation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.activation-box {
+  width: 265px;
+  padding: 5px;
+  border: var(--border) 4px dashed;
+  border-radius: 10px;
+  background-color: var(--border-bg);
+}
+
+.activation-box p {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.qr-code-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-code {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-code h5 {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 0;
+}
+
+.qr-code-text {
+  position: relative;
+  max-width: 100px;
+}
+
+.qr-code-text::after {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  right: 0;
+  bottom: 0px;
+  background-image: url("static/images/phone.png");
+  background-repeat: no-repeat;
+}
+
+.qr-code-area {
+  width: calc(100% - 130px);
+  height: 125px;
+  background-image: url("static/images/qr_code.png");
+  background-repeat: no-repeat;
+}
+
+.qr-code-area::after {
+  /* arrow */
+  /* position: absolute;
+  top: 0;
+  bottom: 0;
+  content: "";
+  width: 125px;
+  height: 125px; */
+}
+
+.qr-code {
+  display: flex;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.content p,
+.content h1 {
+  color: #000;
+  line-height: 28px;
+  margin: 0 auto;
+}
+
+.content h1 {
+  text-transform: uppercase;
+}
+
+.content p {
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 5px;
+}
+
+.qr-code-img {
+  width: 130px;
+  height: 125px;
+}
+
+.green-arrow {
+  /* position: absolute; */
+}
