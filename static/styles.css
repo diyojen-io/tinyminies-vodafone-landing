@@ -65,7 +65,7 @@ body {
   top: 70px;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 100%;
   background-image: url("images/bulut_on.png");
   background-repeat: repeat-x;
 }
@@ -161,6 +161,10 @@ button {
   font-weight: 500;
   color: var(--text);
   margin: 20px auto 5px;
+}
+
+.qr-code-title img {
+  height: 10px;
 }
 
 .qr-code-text {
@@ -319,17 +323,31 @@ button:hover {
 }
 
 @media (max-width: 430px) {
+  .bush-background::after {
+    top: 40px;
+  }
+  .mom-and-kids {
+    background-size: contain;
+    height: 290px;
+  }
+
+  .top-icons {
+    height: 90px;
+    padding: 0 50px;
+    margin-right: 20px;
+  }
+
   .explore-now {
     width: 90%;
+    margin: 10px auto;
   }
   button a {
     font-size: 1.5rem;
     padding-left: 115px;
   }
 
-  .top-icons {
-    padding: 0 10px;
-    margin-right: 0;
+  .bottom-icons {
+    margin-top: 10px;
   }
 
   .bottom-icons img {
@@ -337,11 +355,24 @@ button:hover {
   }
 
   .footer {
+    margin-top: 20px;
     padding: 0 6%;
   }
 
   .links a {
     margin-right: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .mom-and-kids {
+    height: 270px;
+  }
+  .bush-background::after {
+    top: 10px;
+  }
+  .title h1 {
+    font-size: 24px;
   }
 }
 
