@@ -17,17 +17,13 @@
   --border: #6400d8;
   --border-bg: #fffca8;
   --black: #000;
-  --title-font-size: 32px;
-  --subtitle-font-size: 18px;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   text-align: center;
-  min-height: 100vh;
   margin: 0;
   padding: 0;
-  position: relative;
 }
 
 .bg-texture {
@@ -35,7 +31,6 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   z-index: -1;
 }
 
@@ -78,7 +73,8 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  max-width: 600px;
+  width: 100%;
   margin: 0 auto;
   padding: 20px 0;
 }
@@ -95,16 +91,16 @@ button {
 }
 
 .title h1 {
-  font-size: var(--title-font-size);
+  font-size: 32px;
   font-weight: 700;
   color: var(--title);
   margin: 0;
 }
 
 .title p {
-  font-size: var(--subtitle-font-size);
+  font-size: 18px;
   font-weight: 400;
-  color: #ed3382;
+  color: var(--subtitle);
   margin: 0;
 }
 
@@ -120,7 +116,8 @@ button {
 }
 
 .top-icons {
-  width: 390px;
+  max-width: 390px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-right: 20px;
@@ -152,7 +149,8 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 360px;
+  max-width: 360px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -247,4 +245,98 @@ button {
 
 .footer a:hover {
   color: var(--text);
+}
+
+.explore-now {
+  display: none;
+  padding: 0 120px;
+}
+
+button {
+  padding: 10px;
+  width: 100%;
+  background-color: #00d122;
+  border: 4px solid #0c6500;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00b11a;
+}
+
+button a {
+  font-size: 28px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: 65px;
+}
+
+button::before {
+  position: absolute;
+  content: "";
+  width: 150%;
+  height: 150%;
+  left: -10px;
+  top: -15px;
+  background-image: url("images/icon_play.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+/* media query smaller 600 screen */
+@media (max-width: 600px) {
+  .qr-code {
+    display: none;
+  }
+  .explore-now {
+    display: none;
+  }
+
+  .title h1 {
+    font-size: 24px;
+  }
+
+  .title p {
+    font-size: 14px;
+  }
+
+  .activation-box p {
+    font-size: 12px;
+  }
+
+  .qr-code-title {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
+  .footer .links {
+    margin-right: 0;
+  }
+
+  .links a {
+    font-size: 12px;
+  }
+
+  .top-icons {
+    margin-right: 0;
+    padding: 0 20px;
+  }
+
+  .top-icons img {
+    height: 75px;
+  }
+
+  .bottom-icons img {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 550px) {
+  .explore-now {
+    padding: 0 70px;
+  }
 }
