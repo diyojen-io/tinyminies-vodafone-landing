@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="static/styles.css" />
+    <title>Tiny Minies</title>
   </head>
   <body>
-    <div class="top-cloud-background"></div>
-    <div class="bush-background"></div>
+    <div class="bg-texture">
+      <div class="sky-background"></div>
+      <div class="bush-background"></div>
+    </div>
     <div class="container">
       <div class="logo">
         <img src="static/images/logo.png" alt="logo" />
@@ -47,12 +49,13 @@
         <img src="static/images/alt_iconlar.png" alt="alt-iconlar" />
       </div>
       <div class="footer">
-        <a>Kullanım Koşulları</a>
-        <a style="margin-right: 15px">Gizlilik Politikası</a>
-        <a>Yardım</a>
+        <div class="links">
+          <a>Kullanım Koşulları</a>
+          <a>Gizlilik Politikası</a>
+          <a>Yardım</a>
+        </div>
       </div>
     </div>
-    <div class="bottom-cloud-background"></div>
-    <script src="script.js"></script>
+    <script src="static/script.js"></script>
   </body>
 </html>
