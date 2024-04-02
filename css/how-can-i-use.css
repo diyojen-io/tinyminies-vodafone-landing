@@ -60,7 +60,7 @@ header {
 }
 
 .container {
-  margin: 40px auto;
+  margin: 10px auto;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
