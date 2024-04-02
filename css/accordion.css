@@ -1,0 +1,112 @@
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.faq-input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.faq-tabs {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.faq-tab {
+  width: 100%;
+  color: #000;
+  overflow: hidden;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.faq-tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem 1rem 1rem;
+  border-radius: 8px;
+  background: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.faq-tab-label:hover {
+  background: #fff;
+}
+
+.faq-tab-label::after {
+  font-family: "icomoon" !important;
+  content: "\e905";
+  transform: rotate(180deg);
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  margin-top: 3px;
+}
+
+.faq-tab-content {
+  max-height: 0;
+  color: #2c3e50;
+  background: white;
+  font-weight: 400;
+}
+
+.faq-tab-content ul {
+  margin: 0;
+  padding: 0;
+}
+
+.faq-tab-content ul li {
+  margin-left: 20px;
+}
+
+.faq-tab-content ul li div img {
+  width: calc(100% + 68px);
+  margin: 20px -52px 10px 0;
+}
+
+.faq-tab-content p {
+  margin: 0;
+}
+
+.faq-tab-content img {
+  width: 100%;
+}
+
+.faq-input:checked + .faq-tab-label {
+  background: #fff;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.faq-input:checked + .faq-tab-label::after {
+  transform: rotate(360deg);
+  animation: rotate 0.2s linear;
+}
+
+.faq-input:checked ~ .faq-tab-content {
+  max-height: 440px;
+  overflow-y: scroll;
+  padding: 1rem 2rem 1rem 1rem;
+}
+
+.faq-input:checked ~ .faq-tab-content p {
+  margin: 5px 0;
+}

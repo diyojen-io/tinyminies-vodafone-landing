@@ -1,0 +1,105 @@
+/* fonts */
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?a4vw0b");
+  src: url("../fonts/icomoon.eot?a4vw0b#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?a4vw0b") format("truetype"),
+    url("../fonts/icomoon.woff?a4vw0b") format("woff"),
+    url("../fonts/icomoon.svg?a4vw0b#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  background-color: #2dc9d7;
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+}
+
+body.faq {
+  background: none;
+  background-color: #2dc9d7;
+  overflow: auto;
+  height: 100%;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 5%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ee2f7f;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.back-button::after {
+  font-family: "icomoon" !important;
+  content: "\e903";
+  color: white;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 30px;
+}
+
+header {
+  height: 110px;
+  text-align: center;
+  padding: 20px 0 10px;
+}
+
+header {
+  height: 80px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 2;
+}
+
+.page-title span {
+  color: orange;
+}
+
+@media screen and (min-width: 770px) {
+  header {
+    height: 120px;
+  }
+
+  .logo {
+    width: 300px;
+  }
+}
+
+@media screen and (max-height: 760px) {
+  header {
+    height: 60px;
+  }
+}
+
+@media screen and (max-height: 650px) {
+  header {
+    height: 60px;
+  }
+}
