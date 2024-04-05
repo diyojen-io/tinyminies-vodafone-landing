@@ -46,7 +46,7 @@ body.bg {
   line-height: 2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-right: 2;
+  margin-right: 2px;
 }
 
 header {
@@ -128,8 +128,13 @@ header {
   border-radius: 8px;
   padding: 10px 20px;
   font-size: 18px;
-  font-weight: 700;
   cursor: pointer;
+}
+
+.btn-box button a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .footer-faq {

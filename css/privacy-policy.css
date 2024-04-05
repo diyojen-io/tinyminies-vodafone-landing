@@ -46,7 +46,7 @@ body.bg {
   line-height: 2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-right: 2;
+  margin-right: 2px;
 }
 
 header {
