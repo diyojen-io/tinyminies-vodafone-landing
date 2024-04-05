@@ -131,7 +131,7 @@ header {
   cursor: pointer;
 }
 
-.btn-box button a {
+.btn-box a button {
   color: #fff;
   font-weight: 700;
   text-decoration: none;
