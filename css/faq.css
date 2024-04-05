@@ -82,6 +82,19 @@ header {
   color: orange;
 }
 
+.ordered-list {
+  list-style-type: list-style-type;
+}
+
+.ordered-list li a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.faq-tab-content .links p {
+  margin: 10px 0 !important;
+}
+
 /* footer */
 footer {
   position: absolute;

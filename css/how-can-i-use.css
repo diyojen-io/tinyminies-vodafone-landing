@@ -101,6 +101,12 @@ header {
   margin-bottom: 5px;
 }
 
+.content ul li a {
+  text-decoration: underline;
+  cursor: pointer;
+  color: inherit;
+}
+
 .content ul li div img {
   width: calc(100% + 68px);
   margin: 20px -52px 10px 0;
@@ -110,21 +116,20 @@ header {
   margin: 0;
 }
 
+.btn-box {
+  display: flex;
+  justify-content: center;
+}
+
 .btn-box button {
   margin: 20px auto;
   background-color: #00d122;
   border: 3px solid #0c6500;
   border-radius: 8px;
   padding: 10px 20px;
-  color: #fff;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
-}
-
-.btn-box {
-  display: flex;
-  justify-content: center;
 }
 
 .footer-faq {
