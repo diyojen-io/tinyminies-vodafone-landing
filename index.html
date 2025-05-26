@@ -10,25 +10,38 @@
   <style>
     body {
       margin: 0;
-      padding: 20px;
+      padding: 10px;
       font-family: "Vodafone", serif;
-      min-height: 100vh;
+      /* min-height: 100vh; */
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      box-sizing: border-box;
+      overflow-x: hidden;
     }
 
     .container {
       background: white;
-      padding: 40px;
+      padding: 20px;
       text-align: center;
       max-width: 500px;
       width: 100%;
+      margin: auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .logo-img {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+      max-width: 280px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .title {
@@ -36,7 +49,7 @@
       font-size: 36px;
       font-weight: 700;
       color: #333;
-      margin: 0 0 10px 0;
+      margin: 0 0 8px 0;
       line-height: 1.2;
     }
 
@@ -44,13 +57,13 @@
       font-family: 'Vodafone', serif;
       /* color: #ee2f80; */
       font-size: 20px;
-      margin: 0 0 30px 0;
+      margin: 0 0 20px 0;
       font-weight: normal;
     }
 
     .qr-section {
-      margin: 30px 0;
-      padding: 20px;
+      margin: 20px 0;
+      padding: 10px;
     }
 
     .qr-text {
@@ -58,11 +71,13 @@
       color: #6400d8;
       font-size: 18px;
       font-weight: bold;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .qr-code-img {
       margin: 0 auto;
+      max-width: 100%;
+      height: auto;
     }
 
     .main-button {
@@ -76,7 +91,7 @@
       padding: 5px;
       text-decoration: none;
       display: inline-block;
-      margin: 20px 0;
+      margin: 15px 0;
       transition: all 0.2s;
     }
 
@@ -87,7 +102,8 @@
     }
 
     .footer-links {
-      border-top: 1px solid #e0e0e0;
+      padding: 10px 0;
+      margin-top: auto;
     }
 
     .footer-links a {
@@ -103,30 +119,152 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 600px) {
+    .icons {
+      margin: 10px 0;
+    }
+
+    .icons img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
       body {
-        padding: 10px;
+        padding: 3px;
+        /* min-height: 100vh; */
+        /* height: 100vh; */
+        overflow-y: auto;
       }
 
       .container {
-        padding: 20px;
+        padding: 12px;
       }
 
       .title {
-        font-size: 32px;
+        font-size: 30px;
+        margin: 0 0 6px 0;
       }
 
       .subtitle {
-        font-size: 24px;
+        font-size: 18px;
+        margin: 0 0 15px 0;
+      }
+
+      .qr-section {
+        margin: 12px 0;
+        padding: 3px;
       }
 
       .qr-text {
-        font-size: 24px;
+        font-size: 20px;
       }
 
       .main-button {
-        font-size: 32px;
-        padding: 12px 25px;
+        font-size: 28px;
+        padding: 8px 20px;
+        margin: 8px 0;
+      }
+
+      .logo-img {
+        max-width: 220px;
+        margin-bottom: 8px;
+      }
+
+      .icons {
+        margin: 6px 0;
+      }
+
+      .footer-links {
+        padding: 6px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 2px;
+      }
+
+      .container {
+        padding: 8px;
+      }
+
+      .title {
+        font-size: 28px;
+        margin: 0 0 4px 0;
+      }
+
+      .subtitle {
+        font-size: 16px;
+        margin: 0 0 8px 0;
+      }
+
+      .qr-section {
+        margin: 8px 0;
+        padding: 2px;
+      }
+
+      .qr-text {
+        font-size: 18px;
+      }
+
+      .main-button {
+        font-size: 24px;
+        padding: 6px 15px;
+        margin: 6px 0;
+      }
+
+      .logo-img {
+        max-width: 180px;
+        margin-bottom: 6px;
+      }
+
+      .icons {
+        margin: 4px 0;
+      }
+
+      .footer-links {
+        padding: 4px 0;
+      }
+
+      .footer-links a {
+        font-size: 11px;
+        margin: 0 8px;
+      }
+    }
+
+    @media (max-height: 700px) {
+      .container {
+        padding: 10px;
+      }
+
+      .qr-section {
+        margin: 10px 0;
+        padding: 5px;
+      }
+
+      .title {
+        font-size: 28px;
+        margin: 0 0 5px 0;
+      }
+
+      .subtitle {
+        font-size: 16px;
+        margin: 0 0 10px 0;
+      }
+
+      .main-button {
+        font-size: 24px;
+        padding: 6px 15px;
+        margin: 8px 0;
+      }
+    }
+
+    @media (max-width: 900px) {
+
+      #modal-overlay,
+      #modal-container,
+      #modal-close {
+        display: none !important;
       }
     }
   </style>
@@ -138,8 +276,11 @@
     <img src="images/logo.png" class="logo-img" alt="Tiny Minies Logo" />
     <!-- </div> -->
 
+    <h1 class="title" style="font-size: 32px;">
+      Tebrikler,
+    </h1>
+
     <h1 class="title">
-      Tebrikler,<br />
       Tiny Minies'e Hoş Geldiniz!
     </h1>
 
@@ -155,16 +296,16 @@
       Kodu Nasıl Kullanırım?
     </a>
 
-    <div class="icons">
-      <img src="images/testimonials.png" class="img-responsive" />
-    </div>
-
   </div>
+
+  <div class="icons">
+    <img src="images/testimonials.png" class="img-responsive" />
+  </div>
+
   <div class="footer-links">
     <a href="term-of-use.html" class="modal-link">Kullanım Koşulları</a>
     <a href="privacy-policy.html" class="modal-link">Gizlilik Politikası</a>
     <a href="faq.html" class="modal-link">Yardım</a>
-  </div>
   </div>
 
   <!-- Modal Elements (keep existing modal functionality) -->
@@ -310,20 +451,12 @@
       const modalContainer = document.getElementById('modal-container');
       const closeButton = document.getElementById('modal-close');
 
-      // Adjust modal size based on content type
-      if (isLargeContent) {
-        modalContainer.style.width = '1400px';
-        modalContainer.style.maxWidth = '98vw';
-        modalContainer.style.maxHeight = '90vh';
-        // Position close button for large modal
-        closeButton.style.right = 'calc((100vw - 1400px) / 2 + 10px)';
-      } else {
-        modalContainer.style.width = '800px';
-        modalContainer.style.maxWidth = '90vw';
-        modalContainer.style.maxHeight = '90vh';
-        // Position close button for regular modal
-        closeButton.style.right = 'calc((100vw - 800px) / 2 + 10px)';
-      }
+      // Use consistent modal size for all content types
+      modalContainer.style.width = '800px';
+      modalContainer.style.maxWidth = '90vw';
+      modalContainer.style.maxHeight = '90vh';
+      // Position close button for modal
+      closeButton.style.right = 'calc((100vw - 800px) / 2 + 10px)';
 
       document.getElementById('modal-overlay').style.display = 'block';
       modalContainer.style.display = 'block';
@@ -349,8 +482,8 @@
     // Intercept modal links (only on desktop)
     document.querySelectorAll('.modal-link').forEach(link => {
       link.addEventListener('click', function (e) {
-        // Only intercept on desktop (screen width > 700px)
-        if (window.innerWidth > 700) {
+        // Only intercept on desktop (screen width > 900px)
+        if (window.innerWidth > 900) {
           e.preventDefault();
           const href = link.getAttribute('href');
           fetch(href)
@@ -409,7 +542,7 @@
               showModal('<div style="padding: 20px; text-align: center;">İçerik yüklenirken bir hata oluştu.</div>');
             });
         }
-        // On mobile (width <= 700px), allow normal navigation - do nothing to prevent default
+        // On mobile and tablets (width <= 900px), allow normal navigation - do nothing to prevent default
       });
     });
 
@@ -472,14 +605,7 @@
       text-align: left;
     }
 
-    /* Center content for large modals */
-    #modal-container[style*="1400px"] #modal-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px;
-    }
-
-    @media (max-width: 700px) {
+    @media (max-width: 900px) {
 
       #modal-overlay,
       #modal-container,
@@ -489,5 +615,7 @@
     }
   </style>
 </body>
+
+</html>
 
 </html>
