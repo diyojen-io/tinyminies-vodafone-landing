@@ -1,56 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tiny Minies X Vodafone</title>
-  <link rel="stylesheet" href="css/how-can-i-use.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nasıl Kullanırım? - Tiny Minies</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="bg">
-  <form action="index.html">
-    <button type="submit" class="back-button"></button>
-  </form>
-  <header class="bg">
-    <img src="images/logo.png" class="logo" />
-    <div class="page-title">Nasıl Kullanırım?</div>
-  </header>
-  <div class="container">
-    <div class="box">
-      <div class="content">
-        <label>Kodumu Nasıl Kullanacağım? </label>
-        <p>
-          Vodafone hattınız üzerinden size SMS ile gönderilen kodunuz 5 adımda
-          kolayca aktif hale getirerek Tiny Minies aboneliğinizi
-          başlatabilirsiniz:
-        </p>
-        <br />
-        <ul>
-          <li>Tiny Minies uygulamasını indirin ve uygulamayı açın</li>
-          <li>
-            Yönergeleri takip ederek profilinizi tamamlayın ve ana oyun
-            ekranına ulaşın (bu aşamada, uygulama içerisinden ayrıca bir
-            abonelik başlatmadan ilerleyin)
-          </li>
-          <li>Sağ üst köşedeki “Ebeveyn Alanı” bölümüne girin</li>
-          <li>
-            Menüden sırasıyla “Hesap” ve “Aktivasyon Kodu” başlıklarını seçin
-          </li>
-          <li>Cep telefonunuza gönderilen kodu girin</li>
-        </ul>
+<body class="standalone-page">
+  <div class="standalone-container">
+    <div class="standalone-content">
+      <div id="modal-content">
+        <form action="index.html">
+          <button type="submit" class="back-button"></button>
+        </form>
+
+        <img src="images/logo.png" class="logo" />
+        <div class="page-title">Nasıl Kullanırım?</div>
+        <div class="steps-container" id="steps-container"></div>
         <div class="btn-box">
           <a href="https://get.tinyminies.com/lFzv/a2e544c6" target="_blank">
-            <button>Hemen İndirin</button>
+            <button class="modern-btn">Hemen İndirin</button>
           </a>
         </div>
-        <div class="footer-faq">
-          <a href="faq.html">Yardım</a>
+        <div
+          style="text-align: center; margin: 20px 0; font-size: 32px; font-family: 'Vodafone'; font-weight: 700; color: #333333;">
+          24 Saat Tam Erişimin Tadını Çıkarın
         </div>
+        <!-- <div class="footer-faq">
+          <a href="faq.html" class="footer-link">Yardım</a>
+        </div> -->
       </div>
     </div>
   </div>
+
+  <script>
+    // Steps data
+    const steps = [
+      {
+        img: 'images/Vector Smart Object.png',
+        title: 'Tiny Minies uygulamasını açın',
+        desc: 'Uygulamayı cihazınıza indirin ve açın.'
+      },
+      {
+        img: 'images/Vector Smart Object copy 5.png',
+        title: "Ebeveyn Alanı'na gidin",
+        desc: 'Sağ üst köşedeki ebeveyn alanı ikonuna dokunun.'
+      },
+      {
+        img: 'images/Vector Smart Object copy 10.png',
+        title: 'Hesap > Aktivasyon Kodu',
+        desc: 'Menüden sırasıyla "Hesap" ve "Aktivasyon Kodu" başlıklarını seçin.'
+      },
+      {
+        img: 'images/Vector Smart Object copy 11.png',
+        title: 'Kodu girin',
+        desc: 'SMS ile gelen aktivasyon kodunuzu ilgili alana girin.'
+      },
+    ];
+
+    const stepsContainer = document.getElementById('steps-container');
+    steps.forEach((step, idx) => {
+      const stepDiv = document.createElement('div');
+      stepDiv.className = 'step';
+      stepDiv.innerHTML = `
+        <div class="step-title">${step.title}</div>
+        <img src="${step.img}" class="step-img" alt="Step ${idx + 1}" />
+      `;
+      stepsContainer.appendChild(stepDiv);
+    });
+  </script>
 </body>
 
 </html>

@@ -1,13 +1,17 @@
 /* fonts */
 @font-face {
-  font-family: "icomoon";
-  src: url("../fonts/icomoon.woff?a4vw0b") format("woff");
+  font-family: "Vodafone";
+  src: url("../fonts/vodafone-bold.woff") format("woff"),
+    url("../fonts/vodafone-extrabold.woff") format("woff"),
+    url("../fonts/vodafone-light.woff") format("woff"),
+    url("../fonts/vodafone-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Vodafone', Arial, Helvetica, sans-serif;
   font-weight: 500;
   background-color: #2dc9d7;
   position: relative;
@@ -29,15 +33,15 @@ body.bg {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #ee2f7f;
-  border: 1px solid #000;
+  background-color: #fff;
+  border: 2px solid #222;
   cursor: pointer;
 }
 
 .back-button::after {
-  font-family: "icomoon" !important;
+  font-family: 'Vodafone', 'icomoon' !important;
   content: "\e903";
-  color: white;
+  color: #222;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -121,12 +125,14 @@ header {
 
 .content button {
   margin: 20px auto;
-  background-color: #00d122;
+  background-color: #009900;
   border: 3px solid #0c6500;
   border-radius: 8px;
   padding: 10px 20px;
-  color: #fff;
+  color: #333333;
   font-size: 18px;
+  font-family: 'Vodafone';
+  font-weight: 400;
   cursor: pointer;
 }
 
@@ -145,7 +151,7 @@ header {
   margin: 0 10px;
   font-size: 14px;
   text-decoration: none;
-  color: #ee2f7f;
+  color: #222;
 }
 
 .footer-faq a:hover {

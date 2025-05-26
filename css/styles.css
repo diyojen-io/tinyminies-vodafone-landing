@@ -8,18 +8,44 @@
  .ofh{overflow:hidden}.img-button{width:125px;height:40px;border:1px solid #fff;background-color:#ff5200;position:absolute;display:flex;justify-content:center;align-items:center;padding:0 11px;line-height:36px;bottom:32px;border-radius:7px}.img-button-text{margin:0;font-weight:700;font-size:14px;line-height:1.36;letter-spacing:normal;text-align:center;color:#fff}.arrow{border:solid #fff;border-width:0 3px 3px 0;display:inline-block;padding:3px}.right{transform:rotate(-45deg);-webkit-transform:rotate(-45deg)}.link{position:relative;display:flex;align-items:center;justify-content:center;margin:14px auto;border:1px solid #e9e9e9;flex-direction:column}@media screen and (max-width:600px){.col-sm-6,.col-xs-6{padding-right:8px;padding-left:8px}.link{margin:8px auto}}
 
  
- @font-face {
-  font-family: "Bjola";
-  src: url("../fonts/bjola-webfont.eot");
-  src: url("../fonts/bjola-webfont.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/bjola-webfont.woff2") format("woff2"),
-    url("../fonts/bjola-webfont.woff") format("woff"),
-    url("../fonts/bjola-webfont.ttf") format("truetype"),
-    url("../fonts/bjola-webfont.svg#Bjola") format("svg");
-  font-weight: normal;
+ /* Vodafone Font Family */
+@font-face {
+  font-family: "Vodafone";
+  src: url("../fonts/vodafone-regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Vodafone";
+  src: url("../fonts/vodafone-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vodafone";
+  src: url("../fonts/vodafone-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vodafone";
+  src: url("../fonts/vodafone-extrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Keep Bjola for compatibility */
+@font-face {
+  font-family: "Bjola";
+  src: url("../fonts/bjola-webfont.woff2") format("woff2"),
+       url("../fonts/bjola-webfont.woff") format("woff"),
+       url("../fonts/bjola-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 body,
 html {
@@ -97,12 +123,14 @@ html {
     padding: 0;
 }
 .logo-img {
-    max-width: 120px;
+    width: auto;
 }
 .icons {
+    
     display: table;
     width: 368px;
     margin: 0 auto;
+    margin-top: 5px;
 }
 .cloud-bottom {
     max-width: 520px;
@@ -126,7 +154,7 @@ html {
     margin: 0 auto;
 }
 .text-congrats {
-    font-family: 'Bjola';
+    font-family: 'Vodafone';
     font-size: 32px;
     font-weight: 700;
     color: #0044c1;
@@ -134,7 +162,7 @@ html {
     font-weight: normal;
 }
 .text-sub-congrats {
-    font-family: 'Bjola';
+    font-family: 'Vodafone';
     color: #ee2f80;
     padding: 0;
     margin: 9px;
@@ -153,7 +181,7 @@ html {
     height: 67px;
     border: 3px dashed #6400d8;
     border-radius: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Vodafone', Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 13px;
     margin: 0 auto;
@@ -169,7 +197,7 @@ html {
 }
 .qc-container {
     display: table;
-    font-family: 'Bjola';
+    font-family: 'Vodafone';
     width: 368px;
     margin: 0 auto;
     font-weight: normal;
@@ -200,7 +228,7 @@ html {
     width: 30%;
 }
 .qr-code-img {
-    width: 45%;
+    width: 100%;
 }
 .qr-code-img img{
     margin: 0 auto;
@@ -218,17 +246,17 @@ html {
     margin: 0 auto;
 }
 .action-button {
-    background: #00d122;
+    background: #009900;
     border: 3px solid #0c6500;
     border-radius: 100px;
-    color: #fff;
+    color: #333333;
     font-size: 30px;
-    font-family: 'Bjola';
+    font-family: 'Vodafone';
+    font-weight: 400;
     padding: 11px 24px 11px 11px;
     text-align: right;
     margin-left: 20px;
     margin-right: 11px;
-    font-weight: normal;
 }
 .action-button-img {
     position: absolute;
@@ -237,11 +265,7 @@ html {
     top: -15px;
     left: 18px;
 }
-.footer-links {
-    margin-top: 10px;
-}
 .footer-links span a{
-    padding: 0 10px 0 10px;
     font-size: 11px;
     font-weight: 600;
     color: #000;
@@ -358,7 +382,671 @@ html {
         padding: 7px 0;
         margin: 0;
     }
-    .footer-links {
-        margin-top: 6px;
-    }
+}
+
+/* Modal Content Styles */
+#modal-content {
+  font-family: 'Vodafone', Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #333;
+}
+
+#modal-content .logo {
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  z-index: auto;
+  background: none;
+  font-weight: normal;
+  font-size: inherit;
+  padding: 0;
+}
+
+#modal-content .page-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin: 30px 0;
+  color: #333333;
+  font-family: 'Vodafone', serif;
+}
+
+#modal-content .modern-btn {
+  display: inline-block;
+  font-size: 20px;
+  padding: 12px 24px;
+  background: #009900;
+  color: #ffffff !important;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 10px 5px;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  font-family: 'Vodafone';
+  width: 100%;
+}
+
+#modal-content .modern-btn:hover {
+  background: #007700;
+  text-decoration: none;
+}
+
+#modal-content .step {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#modal-content .step-title {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #333;
+}
+
+#modal-content .step-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px auto;
+  border-radius: 8px;
+}
+
+#modal-content .btn-box {
+  text-align: center;
+  margin: 5px 0;
+}
+
+#modal-content .faq {
+  text-align: center;
+  padding: 20px 0;
+  background: none;
+}
+
+#modal-content .footer-link {
+  color: #333 !important;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+  display: inline-block;
+}
+
+#modal-content .footer-link:hover {
+  color: #007bff !important;
+  text-decoration: underline;
+}
+
+#modal-content .faq-page-footer {
+  text-align: center;
+  margin: 30px 0 20px 0;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+#modal-content .faq-page-footer .footer-link {
+  color: #333 !important;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+  display: inline-block;
+}
+
+#modal-content .faq-page-footer .footer-link:hover {
+  color: #007bff !important;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments for modal content */
+@media (max-width: 600px) {
+  #modal-content {
+    padding: 10px;
+  }
+  
+  #modal-content .page-title {
+    font-size: 24px;
+    margin: 5px 0;
+  }
+  
+  #modal-content .step {
+    margin: 20px 0;
+  }
+  
+  #modal-content .content {
+    padding: 15px;
+  }
+}
+
+#modal-content .footer-faq {
+  text-align: center;
+  margin: 5px 0;
+}
+
+#modal-content .faq-tabs {
+  margin: 20px 0;
+}
+
+#modal-content .faq-card {
+  margin: 10px 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+#modal-content .faq-question {
+  width: 100%;
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  transition: background 0.2s;
+}
+
+#modal-content .faq-question:hover {
+  background: #e9ecef;
+}
+
+#modal-content .faq-answer {
+  padding: 20px;
+  background: white;
+  border-top: 1px solid #e0e0e0;
+  line-height: 1.6;
+}
+
+#modal-content .faq-answer ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+#modal-content .faq-answer li {
+  margin: 5px 0;
+}
+
+#modal-content .faq-answer a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+#modal-content .faq-answer a:hover {
+  color: #0056b3;
+}
+
+#modal-content .faq-arrow svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s;
+}
+
+#modal-content .faq-card.open .faq-arrow svg {
+  transform: rotate(180deg);
+}
+
+#modal-content .back-button {
+  display: none;
+}
+
+#modal-content .container {
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+
+#modal-content .content {
+  padding: 20px;
+}
+
+#modal-content .box {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+#modal-content h2, #modal-content h3, #modal-content h5 {
+  color: #333333;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+#modal-content h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#modal-content h3 {
+  font-size: 22px;
+  margin-top: 30px;
+}
+
+#modal-content h5 {
+  font-size: 18px;
+  margin-top: 25px;
+}
+
+#modal-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+#modal-content ul {
+  margin: 15px 0;
+  padding-left: 25px;
+}
+
+#modal-content li {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+#modal-content .effective-date {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+#modal-content .faq {
+  text-align: center;
+  padding: 20px 0;
+  background: none;
+}
+
+#modal-content .footer-link {
+  color: #333 !important;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  transition: color 0.2s;
+  display: inline-block;
+}
+
+#modal-content .footer-link:hover {
+  color: #007bff !important;
+  text-decoration: underline;
+}
+
+/* Standalone page styles (when pages are opened directly, especially on mobile) */
+body.standalone-page {
+  font-family: 'Vodafone', Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.standalone-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  overflow: hidden;
+}
+
+.standalone-content {
+  padding: 30px;
+}
+
+.standalone-page .logo {
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.standalone-page .page-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 30px 0;
+  color: #333333;
+  font-family: 'Vodafone', serif;
+}
+
+.standalone-page .modern-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #009900;
+  color: #333333 !important;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 10px 5px;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  font-family: 'Vodafone';
+  width: 100%;
+}
+
+.standalone-page .modern-btn:hover {
+  background: #007700;
+  text-decoration: none;
+}
+
+.standalone-page .step {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.standalone-page .step-title {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #333;
+}
+
+.standalone-page .step-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px auto;
+  border-radius: 8px;
+}
+
+.standalone-page .btn-box {
+  text-align: center;
+  margin: 5px 0;
+}
+
+.standalone-page .footer-faq {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.standalone-page .faq-tabs {
+  margin: 20px 0;
+}
+
+.standalone-page .faq-card {
+  margin: 10px 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+.standalone-page .faq-question {
+  width: 100%;
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.standalone-page .faq-question:hover {
+  background: #e9ecef;
+}
+
+.standalone-page .faq-answer {
+  padding: 20px;
+  background: white;
+  border-top: 1px solid #e0e0e0;
+  line-height: 1.6;
+}
+
+.standalone-page .faq-answer ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.standalone-page .faq-answer li {
+  margin: 5px 0;
+}
+
+.standalone-page .faq-answer a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.standalone-page .faq-answer a:hover {
+  color: #0056b3;
+}
+
+.standalone-page .faq-arrow svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s;
+}
+
+.standalone-page .faq-card.open .faq-arrow svg {
+  transform: rotate(180deg);
+}
+
+.standalone-page .footer-link {
+  color: #333 !important;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.2s;
+  display: inline-block;
+}
+
+.standalone-page .footer-link:hover {
+  color: #007bff !important;
+  text-decoration: underline;
+}
+
+.standalone-page .faq-page-footer {
+  text-align: center;
+  margin: 30px 0 20px 0;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.standalone-page .back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: white;
+  color: black;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.standalone-page .back-button:hover {
+  background: #f8f9fa;
+  border-color: #0044c1;
+  transform: scale(1.1);
+}
+
+.standalone-page .back-button::before {
+  content: "" !important;
+  display: block !important;
+  width: 20px !important;
+  height: 20px !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3e%3cpolyline points='15,18 9,12 15,6'%3e%3c/polyline%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 16px 16px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Legal document styles */
+.standalone-page h2, .standalone-page h3, .standalone-page h5 {
+  color: #333333;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.standalone-page h2 {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.standalone-page h3 {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.standalone-page h5 {
+  font-size: 16px;
+  margin-top: 25px;
+}
+
+.standalone-page p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.standalone-page ul {
+  margin: 15px 0;
+  padding-left: 25px;
+}
+
+.standalone-page li {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.standalone-page .effective-date {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 700px) {
+  body.standalone-page {
+    padding: 10px;
+  }
+  
+  .standalone-page .back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: all 0.2s;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .standalone-page .back-button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .standalone-page .back-button::before {
+    content: "←";
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+  }
+  
+  .standalone-content {
+    padding: 20px;
+  }
+  
+  .standalone-page .page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .standalone-page .step {
+    margin: 15px 0;
+  }
+  
+  .standalone-page h2 {
+    font-size: 22px;
+  }
+  
+  .standalone-page h3 {
+    font-size: 18px;
+  }
+}
+
+/* Back button base styles - high specificity to override other CSS files */
+body.standalone-page form .back-button,
+body.standalone-page .back-button {
+  position: absolute !important;
+  top: 20px !important;
+  left: 20px !important;
+  background: white !important;
+  color: black !important;
+  border: 2px solid #ddd !important;
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  cursor: pointer !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+  transition: all 0.2s !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  z-index: 100 !important;
+}
+
+body.standalone-page form .back-button:hover,
+body.standalone-page .back-button:hover {
+  background: #f8f9fa !important;
+  border-color: #0044c1 !important;
+  transform: scale(1.1) !important;
+}
+
+body.standalone-page form .back-button::before,
+body.standalone-page .back-button::before {
+  content: "" !important;
+  display: block !important;
+  width: 20px !important;
+  height: 20px !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3e%3cpolyline points='15,18 9,12 15,6'%3e%3c/polyline%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 16px 16px !important;
+  flex-shrink: 0 !important;
+}
+
+body.standalone-page form .back-button::after {
+  display: none !important;
 }
