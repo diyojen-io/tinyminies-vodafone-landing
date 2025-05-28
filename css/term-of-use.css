@@ -1,18 +1,8 @@
-/* fonts */
-@font-face {
-  font-family: "Vodafone";
-  src: url("../fonts/vodafone-bold.woff") format("woff"),
-    url("../fonts/vodafone-extrabold.woff") format("woff"),
-    url("../fonts/vodafone-light.woff") format("woff"),
-    url("../fonts/vodafone-regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+/* Term of Use Page Styles */
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Vodafone', Arial, Helvetica, sans-serif;
-  font-weight: 500;
   background-color: #2dc9d7;
   position: relative;
   z-index: -1;
@@ -26,41 +16,10 @@ body.bg {
   height: 100%;
 }
 
-.back-button {
-  position: absolute;
-  top: 20px;
-  left: 5%;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #fff;
-  border: 2px solid #222;
-  cursor: pointer;
-}
-
-.back-button::after {
-  font-family: 'Vodafone', 'icomoon' !important;
-  content: "\e903";
-  color: #222;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 2;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin-right: 2px;
-}
-
 header {
   height: 50px;
   text-align: center;
   padding: 20px 0 10px;
-}
-
-.logo {
-  width: 150px;
 }
 
 .container {
@@ -141,23 +100,6 @@ header {
   justify-content: center;
 }
 
-.footer-faq {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.footer-faq a {
-  margin: 0 10px;
-  font-size: 14px;
-  text-decoration: none;
-  color: #222;
-}
-
-.footer-faq a:hover {
-  text-decoration: underline;
-}
-
 .app-link {
   color: #ee2f7f;
   cursor: pointer;
@@ -167,15 +109,8 @@ header {
   text-decoration: underline;
 }
 
-.page-title {
-  font-size: 24px;
-  font-weight: 700;
-  color: #fff;
-  line-height: 2;
-}
-
 @media screen and (max-width: 700px) {
   .box {
     width: 90%;
   }
-}
+} 
