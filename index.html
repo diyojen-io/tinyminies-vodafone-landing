@@ -128,6 +128,16 @@
       height: auto;
     }
 
+    /* Desktop/Mobile visibility controls */
+    .desktop-only {
+      display: inline-block;
+    }
+
+    .mobile-only {
+      display: none;
+    }
+
+
     @media (max-width: 768px) {
       body {
         padding: 3px;
@@ -230,6 +240,15 @@
         font-size: 11px;
         margin: 0 8px;
       }
+
+      .text-button {
+        font-size: 19px;
+        margin: 12px 0;
+        text-decoration: none;
+        color: #333333;
+        font-weight: bold;
+        margin-top: 10px;
+      }
     }
 
     @media (max-height: 700px) {
@@ -260,6 +279,23 @@
     }
 
     @media (max-width: 900px) {
+      .desktop-only {
+        display: none;
+      }
+
+      .mobile-only {
+        display: inline-block;
+      }
+
+      .text-button {
+        font-size: 19px;
+        margin: 12px 0;
+        text-decoration: none;
+        color: #333333;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
 
       #modal-overlay,
       #modal-container,
@@ -292,7 +328,17 @@
       <img src="images/Vector Smart Object copy 12.png" class="qr-code-img" alt="QR Code" />
     </div>
 
-    <a href="how-can-i-use.html" class="modal-link main-button">
+    <!-- Desktop: Keep original button -->
+    <a href="how-can-i-use.html" class="modal-link main-button desktop-only">
+      Kodu Nasıl Kullanırım?
+    </a>
+
+    <!-- Mobile/Tablet: Add download button and text link -->
+    <a href="https://get.tinyminies.com/lFzv/a2e544c6" target="_blank" class="main-button mobile-only">
+      Hemen İndirin
+    </a>
+
+    <a href="how-can-i-use.html" class="modal-link text-button mobile-only">
       Kodu Nasıl Kullanırım?
     </a>
 
@@ -615,7 +661,5 @@
     }
   </style>
 </body>
-
-</html>
 
 </html>
