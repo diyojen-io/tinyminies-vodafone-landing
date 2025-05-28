@@ -1,0 +1,377 @@
+/* Modal Styles */
+
+/* Modal Overlay and Container */
+#modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.2s;
+}
+
+#modal-container {
+  display: none;
+  position: fixed;
+  top: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1001;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  padding: 0;
+  max-width: 90vw;
+  width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  transition: box-shadow 0.2s;
+  scrollbar-width: thin;
+}
+
+#modal-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+#modal-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+#modal-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+#modal-container::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Ensure content fills the modal properly */
+#modal-container > * {
+  width: 100%;
+}
+
+/* Modal Close Button */
+#modal-close {
+  display: none;
+  position: fixed;
+  top: calc(5vh + 10px);
+  right: calc((100vw - 800px) / 2 + 10px);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #222;
+  font-size: 22px;
+  font-weight: bold;
+  color: #222;
+  z-index: 1002;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#modal-close:hover {
+  background: #f3f3f3;
+  border-color: #444;
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* Modal Content Styles */
+#modal-content {
+  padding: 30px;
+  margin: 0 auto;
+  line-height: 1.6;
+  max-width: 100%;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+#modal-content .logo {
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  z-index: auto;
+  background: none;
+  font-weight: normal;
+  font-size: inherit;
+  padding: 0;
+}
+
+#modal-content .page-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin: 30px 0;
+  color: #333333;
+  font-family: 'Vodafone', serif;
+}
+
+#modal-content .modern-btn {
+  display: inline-block;
+  font-size: 20px;
+  padding: 12px 24px;
+  background: #009900;
+  color: #ffffff !important;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 10px 5px;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  font-family: 'Vodafone';
+  width: 100%;
+}
+
+#modal-content .modern-btn:hover {
+  background: #007700;
+  text-decoration: none;
+}
+
+/* Steps in Modal */
+#modal-content .step {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#modal-content .step-title {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #333;
+}
+
+#modal-content .step-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px auto;
+  border-radius: 8px;
+}
+
+#modal-content .btn-box {
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* FAQ in Modal */
+#modal-content .faq {
+  text-align: center;
+  padding: 20px 0;
+  background: none;
+}
+
+#modal-content .faq-tabs {
+  margin: 20px 0;
+}
+
+#modal-content .faq-card {
+  margin: 10px 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+#modal-content .faq-question {
+  width: 100%;
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  transition: background 0.2s;
+}
+
+#modal-content .faq-question:hover {
+  background: #e9ecef;
+}
+
+#modal-content .faq-answer {
+  padding: 20px;
+  background: white;
+  border-top: 1px solid #e0e0e0;
+  line-height: 1.6;
+}
+
+#modal-content .faq-answer ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+#modal-content .faq-answer li {
+  margin: 5px 0;
+}
+
+#modal-content .faq-answer a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+#modal-content .faq-answer a:hover {
+  color: #0056b3;
+}
+
+#modal-content .faq-arrow svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s;
+}
+
+#modal-content .faq-card.open .faq-arrow svg {
+  transform: rotate(180deg);
+}
+
+/* Hide elements in modal */
+#modal-content .back-button {
+  display: none;
+}
+
+#modal-content .container {
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+
+#modal-content .content {
+  padding: 20px;
+}
+
+#modal-content .box {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+/* Typography in Modal */
+#modal-content h2, #modal-content h3, #modal-content h5 {
+  color: #333333;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+#modal-content h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#modal-content h3 {
+  font-size: 22px;
+  margin-top: 30px;
+}
+
+#modal-content h5 {
+  font-size: 18px;
+  margin-top: 25px;
+}
+
+#modal-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+#modal-content ul {
+  margin: 15px 0;
+  padding-left: 25px;
+}
+
+#modal-content li {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+#modal-content .effective-date {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Footer Links in Modal */
+#modal-content .footer-link {
+  color: #333 !important;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+  display: inline-block;
+}
+
+#modal-content .footer-link:hover {
+  color: #007bff !important;
+  text-decoration: underline;
+}
+
+#modal-content .faq-page-footer {
+  text-align: center;
+  margin: 30px 0 20px 0;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+#modal-content .faq-page-footer .footer-link {
+  color: #333 !important;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+  display: inline-block;
+}
+
+#modal-content .faq-page-footer .footer-link:hover {
+  color: #007bff !important;
+  text-decoration: underline;
+}
+
+/* Responsive Modal */
+@media (max-width: 600px) {
+  #modal-content {
+    padding: 10px;
+  }
+  
+  #modal-content .page-title {
+    font-size: 24px;
+    margin: 5px 0;
+  }
+  
+  #modal-content .step {
+    margin: 20px 0;
+  }
+  
+  #modal-content .content {
+    padding: 15px;
+  }
+}
+
+/* Hide modal on mobile/tablet */
+@media (max-width: 900px) {
+  #modal-overlay,
+  #modal-container,
+  #modal-close {
+    display: none !important;
+  }
+} 

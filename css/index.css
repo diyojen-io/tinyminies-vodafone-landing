@@ -1,0 +1,338 @@
+/* Index Page Specific Styles */
+
+/* Layout */
+body {
+  margin: 0;
+  padding: 10px;
+  font-family: "Vodafone", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Logo */
+.logo-img {
+  margin-bottom: 15px;
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Typography */
+.title {
+  font-family: 'Vodafone', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.title-large {
+  font-size: 42px;
+}
+
+.subtitle {
+  font-family: 'Vodafone', serif;
+  font-size: 20px;
+  margin: 0 0 20px 0;
+  font-weight: normal;
+}
+
+/* QR Section */
+.qr-section {
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.qr-text {
+  font-family: 'Vodafone', serif;
+  color: #6400d8;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.qr-code-img {
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Buttons */
+.main-button {
+  background: #009900;
+  width: 100%;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 400;
+  font-family: 'Vodafone';
+  padding: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 15px 0;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.main-button:hover {
+  background: #007700;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.text-button {
+  background: none;
+  border: none;
+  color: #333333;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Vodafone';
+  text-decoration: none;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 0;
+  width: auto;
+  display: inline-block;
+}
+
+.text-button:hover {
+  color: #222222;
+  background: none;
+  text-decoration: underline;
+}
+
+/* Desktop/Mobile visibility controls */
+.desktop-only {
+  display: inline-block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* Footer */
+.footer-links {
+  padding: 10px 0;
+  margin-top: auto;
+}
+
+.footer-links a {
+  color: #666;
+  text-decoration: none;
+  font-size: 12px;
+  margin: 0 10px;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #0044c1;
+  text-decoration: underline;
+}
+
+/* Icons */
+.icons {
+  margin: 10px 0;
+  width: 368px;
+}
+
+.icons img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  body {
+    padding: 3px;
+    overflow-y: auto;
+  }
+
+  .container {
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 30px;
+    margin: 0 0 6px 0;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    margin: 0 0 15px 0;
+  }
+
+  .qr-section {
+    margin: 12px 0;
+    padding: 3px;
+  }
+
+  .qr-text {
+    font-size: 20px;
+  }
+
+  .main-button {
+    font-size: 28px;
+    padding: 8px 20px;
+    margin: 8px 0;
+  }
+
+  .logo-img {
+    max-width: 320px;
+    margin-bottom: 8px;
+  }
+
+  .icons {
+    margin: 6px 0;
+  }
+
+  .footer-links {
+    padding: 6px 0;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  body {
+    padding: 2px;
+  }
+
+  .container {
+    padding: 8px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin: 0 0 4px 0;
+  }
+  .title-large {
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin: 0 0 8px 0;
+  }
+
+  .qr-section {
+    margin: 8px 0;
+    padding: 2px;
+  }
+
+  .qr-text {
+    font-size: 18px;
+  }
+
+  .main-button {
+    font-size: 24px;
+    padding: 6px 15px;
+    margin: 6px 0;
+  }
+
+  .logo-img {
+    max-width: 320px;
+    margin-bottom: 6px;
+  }
+
+  .icons {
+    margin: 4px 0;
+  }
+
+  .footer-links {
+    padding: 4px 0;
+  }
+
+  .footer-links a {
+    font-size: 11px;
+    margin: 0 8px;
+  }
+
+  .text-button {
+    font-size: 19px;
+    margin: 12px 0;
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+}
+
+/* Short screens */
+@media (max-height: 700px) {
+  .container {
+    padding: 10px;
+  }
+
+  .qr-section {
+    margin: 10px 0;
+    padding: 5px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin: 0 0 5px 0;
+  }
+  
+  .title-large {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+  }
+
+  .main-button {
+    font-size: 24px;
+    padding: 6px 15px;
+    margin: 8px 0;
+  }
+}
+
+/* Mobile/Tablet breakpoint for modal and visibility */
+@media (max-width: 900px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: inline-block;
+  }
+
+  .text-button {
+    font-size: 19px;
+    margin: 12px 0;
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  /* Hide modal functionality on mobile/tablet */
+  #modal-overlay,
+  #modal-container,
+  #modal-close {
+    display: none !important;
+  }
+} 

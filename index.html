@@ -6,313 +6,20 @@
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tiny Minies X Vodafone</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <style>
-    body {
-      margin: 0;
-      padding: 10px;
-      font-family: "Vodafone", serif;
-      /* min-height: 100vh; */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      box-sizing: border-box;
-      overflow-x: hidden;
-    }
 
-    .container {
-      background: white;
-      padding: 20px;
-      text-align: center;
-      max-width: 500px;
-      width: 100%;
-      margin: auto;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .logo-img {
-      margin-bottom: 15px;
-      max-width: 280px;
-      width: 100%;
-      height: auto;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .title {
-      font-family: 'Vodafone', serif;
-      font-size: 36px;
-      font-weight: 700;
-      color: #333;
-      margin: 0 0 8px 0;
-      line-height: 1.2;
-    }
-
-    .subtitle {
-      font-family: 'Vodafone', serif;
-      /* color: #ee2f80; */
-      font-size: 20px;
-      margin: 0 0 20px 0;
-      font-weight: normal;
-    }
-
-    .qr-section {
-      margin: 20px 0;
-      padding: 10px;
-    }
-
-    .qr-text {
-      font-family: 'Vodafone', serif;
-      color: #6400d8;
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .qr-code-img {
-      margin: 0 auto;
-      max-width: 100%;
-      height: auto;
-    }
-
-    .main-button {
-      background: #009900;
-      width: 100%;
-      border-radius: 5px;
-      color: #ffffff;
-      font-size: 36px;
-      font-weight: 400;
-      font-family: 'Vodafone';
-      padding: 5px;
-      text-decoration: none;
-      display: inline-block;
-      margin: 15px 0;
-      transition: all 0.2s;
-    }
-
-    .main-button:hover {
-      background: #007700;
-      color: #ffffff;
-      text-decoration: none;
-    }
-
-    .footer-links {
-      padding: 10px 0;
-      margin-top: auto;
-    }
-
-    .footer-links a {
-      color: #666;
-      text-decoration: none;
-      font-size: 12px;
-      margin: 0 10px;
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover {
-      color: #0044c1;
-      text-decoration: underline;
-    }
-
-    .icons {
-      margin: 10px 0;
-    }
-
-    .icons img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    /* Desktop/Mobile visibility controls */
-    .desktop-only {
-      display: inline-block;
-    }
-
-    .mobile-only {
-      display: none;
-    }
-
-
-    @media (max-width: 768px) {
-      body {
-        padding: 3px;
-        /* min-height: 100vh; */
-        /* height: 100vh; */
-        overflow-y: auto;
-      }
-
-      .container {
-        padding: 12px;
-      }
-
-      .title {
-        font-size: 30px;
-        margin: 0 0 6px 0;
-      }
-
-      .subtitle {
-        font-size: 18px;
-        margin: 0 0 15px 0;
-      }
-
-      .qr-section {
-        margin: 12px 0;
-        padding: 3px;
-      }
-
-      .qr-text {
-        font-size: 20px;
-      }
-
-      .main-button {
-        font-size: 28px;
-        padding: 8px 20px;
-        margin: 8px 0;
-      }
-
-      .logo-img {
-        max-width: 220px;
-        margin-bottom: 8px;
-      }
-
-      .icons {
-        margin: 6px 0;
-      }
-
-      .footer-links {
-        padding: 6px 0;
-      }
-    }
-
-    @media (max-width: 480px) {
-      body {
-        padding: 2px;
-      }
-
-      .container {
-        padding: 8px;
-      }
-
-      .title {
-        font-size: 28px;
-        margin: 0 0 4px 0;
-      }
-
-      .subtitle {
-        font-size: 16px;
-        margin: 0 0 8px 0;
-      }
-
-      .qr-section {
-        margin: 8px 0;
-        padding: 2px;
-      }
-
-      .qr-text {
-        font-size: 18px;
-      }
-
-      .main-button {
-        font-size: 24px;
-        padding: 6px 15px;
-        margin: 6px 0;
-      }
-
-      .logo-img {
-        max-width: 180px;
-        margin-bottom: 6px;
-      }
-
-      .icons {
-        margin: 4px 0;
-      }
-
-      .footer-links {
-        padding: 4px 0;
-      }
-
-      .footer-links a {
-        font-size: 11px;
-        margin: 0 8px;
-      }
-
-      .text-button {
-        font-size: 19px;
-        margin: 12px 0;
-        text-decoration: none;
-        color: #333333;
-        font-weight: bold;
-        margin-top: 10px;
-      }
-    }
-
-    @media (max-height: 700px) {
-      .container {
-        padding: 10px;
-      }
-
-      .qr-section {
-        margin: 10px 0;
-        padding: 5px;
-      }
-
-      .title {
-        font-size: 28px;
-        margin: 0 0 5px 0;
-      }
-
-      .subtitle {
-        font-size: 16px;
-        margin: 0 0 10px 0;
-      }
-
-      .main-button {
-        font-size: 24px;
-        padding: 6px 15px;
-        margin: 8px 0;
-      }
-    }
-
-    @media (max-width: 900px) {
-      .desktop-only {
-        display: none;
-      }
-
-      .mobile-only {
-        display: inline-block;
-      }
-
-      .text-button {
-        font-size: 19px;
-        margin: 12px 0;
-        text-decoration: none;
-        color: #333333;
-        font-weight: bold;
-        margin-top: 10px;
-      }
-
-
-      #modal-overlay,
-      #modal-container,
-      #modal-close {
-        display: none !important;
-      }
-    }
-  </style>
+  <!-- CSS Files in order of importance -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/modal.css" />
 </head>
 
 <body>
   <div class="container">
     <!-- <div style="width: 100%"> -->
-    <img src="images/logo.png" class="logo-img" alt="Tiny Minies Logo" />
+    <img src="images/tm-logo.png" class="logo-img" alt="Tiny Minies Logo" />
     <!-- </div> -->
 
-    <h1 class="title" style="font-size: 42px;">
+    <h1 class="title title-large">
       Tebrikler,
     </h1>
 
@@ -321,11 +28,11 @@
     </h1>
 
     <p class="subtitle">
-      Çocuğunuzun Öğrenme Macerası Burada Başlıyor!
+      Aktivasyon kodunuz SMS ile telefon numaranıza gönderildi.
     </p>
 
     <div class="qr-section">
-      <img src="images/Vector Smart Object copy 12.png" class="qr-code-img" alt="QR Code" />
+      <img src="images/qr-code-v2.png" class="qr-code-img" alt="QR Code" />
     </div>
 
     <!-- Desktop: Keep original button -->
@@ -354,15 +61,10 @@
     <a href="faq.html" class="modal-link">Yardım</a>
   </div>
 
-  <!-- Modal Elements (keep existing modal functionality) -->
-  <div id="modal-overlay"
-    style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.15);z-index:1000;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);">
-  </div>
-  <div id="modal-container"
-    style="display:none;position:fixed;top:5vh;left:50%;transform:translateX(-50%);z-index:1001;background:#fff;border-radius:18px;box-shadow:0 8px 32px rgba(0,0,0,0.18);padding:0;max-width:90vw;width:800px;max-height:90vh;overflow-y:auto;">
-  </div>
-  <button id="modal-close"
-    style="display:none;position:fixed;top:calc(5vh + 10px);right:calc((100vw - 800px) / 2 + 10px);width:36px;height:36px;border-radius:50%;background:#fff;border:2px solid #222;font-size:22px;font-weight:bold;color:#222;z-index:1002;cursor:pointer;">&times;</button>
+  <!-- Modal Elements -->
+  <div id="modal-overlay"></div>
+  <div id="modal-container"></div>
+  <button id="modal-close">&times;</button>
 
   <!-- Keep existing JavaScript functionality -->
   <script>
@@ -374,22 +76,22 @@
       // Steps data for "Nasıl Kullanırım" page
       const steps = [
         {
-          img: 'images/Vector Smart Object.png',
+          img: 'images/tm-app-icon.png',
           title: 'Tiny Minies uygulamasını açın',
           desc: 'Uygulamayı cihazınıza indirin ve açın.'
         },
         {
-          img: 'images/Vector Smart Object copy 5.png',
+          img: 'images/parents-area.png',
           title: "Ebeveyn Alanı'na gidin",
           desc: 'Sağ üst köşedeki ebeveyn alanı ikonuna dokunun.'
         },
         {
-          img: 'images/Vector Smart Object copy 10.png',
+          img: 'images/activation-code.png',
           title: 'Hesap > Aktivasyon Kodu',
           desc: 'Menüden sırasıyla "Hesap" ve "Aktivasyon Kodu" başlıklarını seçin.'
         },
         {
-          img: 'images/Vector Smart Object copy 11.png',
+          img: 'images/enter-code.png',
           title: 'Kodu girin',
           desc: 'SMS ile gelen aktivasyon kodunuzu ilgili alana girin.'
         },
@@ -597,69 +299,6 @@
       if (e.key === 'Escape') closeModal();
     });
   </script>
-
-  <!-- Keep existing modal styles -->
-  <style>
-    #modal-overlay {
-      transition: background 0.2s;
-    }
-
-    #modal-container {
-      transition: box-shadow 0.2s;
-      max-height: 90vh;
-      overflow-y: auto;
-      scrollbar-width: thin;
-    }
-
-    /* Ensure content fills the modal properly */
-    #modal-container>* {
-      width: 100%;
-    }
-
-    #modal-container::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    #modal-container::-webkit-scrollbar-track {
-      background: #f1f1f1;
-      border-radius: 4px;
-    }
-
-    #modal-container::-webkit-scrollbar-thumb {
-      background: #c1c1c1;
-      border-radius: 4px;
-    }
-
-    #modal-container::-webkit-scrollbar-thumb:hover {
-      background: #a1a1a1;
-    }
-
-    #modal-close:hover {
-      background: #f3f3f3;
-      border-color: #444;
-      color: #000;
-      transform: scale(1.1);
-      transition: all 0.2s;
-    }
-
-    /* Ensure modal content styles are properly applied */
-    #modal-container #modal-content {
-      padding: 30px;
-      margin: 0 auto;
-      line-height: 1.6;
-      max-width: 100%;
-      text-align: left;
-    }
-
-    @media (max-width: 900px) {
-
-      #modal-overlay,
-      #modal-container,
-      #modal-close {
-        display: none !important;
-      }
-    }
-  </style>
 </body>
 
 </html>
